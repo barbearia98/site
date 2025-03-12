@@ -2,7 +2,7 @@
   "name": "barbearia-98",
   "version": "1.0.0",
   "description": "Website da Barbearia 98",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build:css": "tailwindcss -i ./styles.css -o ./dist/styles.css --watch"
   },
