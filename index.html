@@ -1,83 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/public/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/public/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/public/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Barbearia98" />
+    <link rel="manifest" href="/public/icons/site.webmanifest" />
     <title>Barbearia 98</title>
-   
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'yellow-primary': '#D4AF37',
-                        'light-gray': 'rgba(240, 240, 240, 1)',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .text-uppercase {
-            text-transform: uppercase;
-        }
-        
-        .active-nav {
-            color: #D4AF37 !important;
-            font-weight: 600;
-        }
-        
-        .mobile-menu {
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .mobile-menu.show {
-            transform: translateX(0);
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/styles.css">
+    <script src="app.js" defer></script>
 </head>
-<body class="bg-gray-100">
-    <!-- Menu fixo -->
+
+<body class="bg-gray-100 font-sans">
     <nav class="fixed top-0 left-0 right-0 bg-black bg-opacity-90 shadow-lg z-50">
         <div class="container mx-auto px-6 py-3 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="#" class="flex items-center">
-                    <img src="./images/barbearia-98-logo.png" alt="Barbearia 98" class="h-[60px]">
+                    <img src="./public/images/barbearia-98-logo.webp" alt="Barbearia 98" class="h-[60px]">
                 </a>
             </div>
-            
+
             <ul class="hidden md:flex space-x-8 items-center">
-                <li><a href="#servicos" class="nav-link text-white hover:text-yellow-primary transition">Nossos Serviços</a></li>
+                <li><a href="#servicos" class="nav-link text-white hover:text-yellow-primary transition">Nossos
+                        Serviços</a></li>
                 <li><a href="#precos" class="nav-link text-white hover:text-yellow-primary transition">Preços</a></li>
-                <li><a href="#localizacao" class="nav-link text-white hover:text-yellow-primary transition">Localização</a></li>
+                <li><a href="#localizacao"
+                        class="nav-link text-white hover:text-yellow-primary transition">Localização</a></li>
                 <li>
-                    <a href="https://agendeonline.salonsoft.com.br/barbearia98" target="_blank" class="bg-black text-white px-4 py-2.5 rounded-lg w-[120px] h-[39px] inline-flex items-center justify-center hover:bg-yellow-primary transition border border-yellow-primary">
+                    <a href="https://agendeonline.salonsoft.com.br/barbearia98" target="_blank"
+                        class="bg-black text-white px-4 py-2.5 rounded-lg w-[120px] h-[39px] inline-flex items-center justify-center hover:bg-yellow-primary transition border border-yellow-primary">
                         Agendar
                     </a>
                 </li>
             </ul>
-            
-            <!-- Menu Mobile Button -->
+
             <div class="md:hidden">
                 <button id="menu-toggle" class="focus:outline-none text-white">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
-        
-        <!-- Menu Mobile -->
-        <div id="mobile-menu" class="mobile-menu fixed top-[76px] left-0 bottom-0 w-full bg-black bg-opacity-95 md:hidden">
+
+        <div id="mobile-menu"
+            class="mobile-menu fixed top-[76px] left-0 bottom-0 w-full bg-black bg-opacity-95 md:hidden">
             <div class="px-6 py-8">
                 <ul class="space-y-6 flex flex-col items-center">
-                    <li><a href="#servicos" class="mobile-nav-link text-white text-xl hover:text-yellow-primary transition">Nossos Serviços</a></li>
-                    <li><a href="#precos" class="mobile-nav-link text-white text-xl hover:text-yellow-primary transition">Preços</a></li>
-                    <li><a href="#localizacao" class="mobile-nav-link text-white text-xl hover:text-yellow-primary transition">Localização</a></li>
+                    <li><a href="#servicos"
+                            class="mobile-nav-link text-white text-xl hover:text-yellow-primary transition">Nossos
+                            Serviços</a></li>
+                    <li><a href="#precos"
+                            class="mobile-nav-link text-white text-xl hover:text-yellow-primary transition">Preços</a>
+                    </li>
+                    <li><a href="#localizacao"
+                            class="mobile-nav-link text-white text-xl hover:text-yellow-primary transition">Localização</a>
+                    </li>
                     <li class="pt-4">
-                        <a href="https://agendeonline.salonsoft.com.br/barbearia98" target="_blank" class="bg-black text-white px-6 py-3 rounded-lg inline-flex items-center justify-center hover:bg-yellow-primary transition border border-yellow-primary">
+                        <a href="https://agendeonline.salonsoft.com.br/barbearia98" target="_blank"
+                            class="bg-black text-white px-6 py-3 rounded-lg inline-flex items-center justify-center hover:bg-yellow-primary transition border border-yellow-primary">
                             Agendar
                         </a>
                     </li>
@@ -86,10 +76,9 @@
         </div>
     </nav>
 
-    <!-- Ajustar header para compensar o menu fixo -->
     <header class="relative bg-cover bg-center bg-no-repeat h-[500px] pt-[76px]">
         <div class="absolute inset-0">
-            <img src="./images/luis-quintero-ia5aE4JL8_A-unsplash.jpg" alt="Background" class="w-full h-full object-cover filter blur-[4px]">
+            <img src="./public/images/hero-image-barbearia.webp" alt="Background" class="w-full h-full object-cover">
         </div>
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="container relative z-10 mx-auto px-6 flex h-[400px] items-center">
@@ -101,12 +90,12 @@
     </header>
 
     <main class="w-full">
-       <section id="servicos" class="py-16 bg-gray-900 text-white">
+        <section id="servicos" class="py-16 bg-gray-900 text-white">
             <h2 class="text-3xl font-bold mb-16 text-center text-uppercase">
-                <span class="text-white">NOSSOS</span> 
+                <span class="text-white">NOSSOS</span>
                 <span class="text-yellow-primary">SERVIÇOS</span>
             </h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8">
                 <div class="bg-gray-800 p-8 rounded-lg shadow-md flex flex-col justify-center">
                     <ul class="space-y-6">
@@ -119,7 +108,8 @@
                         <li class="flex items-center p-4 border-b border-gray-700">
                             <div>
                                 <h3 class="text-xl font-semibold">Cabelo</h3>
-                                <p class="text-gray-300 mt-2">Cortes simples, luzes platinadas, pigmentação, platinado</p>
+                                <p class="text-gray-300 mt-2">Cortes simples, luzes platinadas, pigmentação, platinado
+                                </p>
                             </div>
                         </li>
                         <li class="flex items-center p-4">
@@ -130,27 +120,28 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
-                    <img src="./images/hair-cut.jpg" alt="Corte de cabelo" class="absolute inset-0 w-full h-full object-cover filter grayscale blur-[4px]">
+                    <img src="./public/images/hair-cut.webp" alt="Corte de cabelo"
+                        class="absolute inset-0 w-full h-full object-cover filter grayscale blur-[4px]">
                 </div>
             </div>
-       </section>
-       
-       <section id="precos" class="py-16 bg-light-gray">
+        </section>
+
+        <section id="precos" class="py-16 bg-light-gray">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold mb-16 text-center text-uppercase">
-                    <span class="text-black">NOSSOS</span> 
+                    <span class="text-black">NOSSOS</span>
                     <span class="text-yellow-primary">PREÇOS</span>
                 </h2>
-                
+
                 <div class="max-w-3xl mx-auto">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                         <div class="grid grid-cols-2 border-b border-gray-200 bg-gray-50 font-bold">
                             <div class="py-4 px-6 text-left text-uppercase">Serviço</div>
                             <div class="py-4 px-6 text-right text-uppercase">Preço</div>
                         </div>
-                        
+
                         <div class="grid grid-cols-2 border-b border-gray-200">
                             <div class="py-4 px-6 text-left">Cabelo</div>
                             <div class="py-4 px-6 text-right font-medium text-yellow-primary">a partir de R$ 25,00</div>
@@ -161,20 +152,21 @@
                             <div class="py-4 px-6 text-right font-medium text-yellow-primary">a partir de R$ 40,00</div>
                         </div>
 
-                        
+
                         <div class="grid grid-cols-2 border-b border-gray-200">
                             <div class="py-4 px-6 text-left">Corte + Luzes Platinada</div>
                             <div class="py-4 px-6 text-right font-medium text-yellow-primary">a partir de R$ 70,00</div>
                         </div>
-                        
+
                         <div class="grid grid-cols-2 border-b border-gray-200">
                             <div class="py-4 px-6 text-left">Corte + pigmentação</div>
                             <div class="py-4 px-6 text-right font-medium text-yellow-primary">a partir de R$ 45,00</div>
                         </div>
-                        
+
                         <div class="grid grid-cols-2">
                             <div class="py-4 px-6 text-left">Corte + platinado</div>
-                            <div class="py-4 px-6 text-right font-medium text-yellow-primary">a partir de R$ 100,00</div>
+                            <div class="py-4 px-6 text-right font-medium text-yellow-primary">a partir de R$ 100,00
+                            </div>
                         </div>
 
                         <div class="grid grid-cols-2">
@@ -187,73 +179,65 @@
                             <div class="py-4 px-6 text-right font-medium text-yellow-primary">a partir de R$ 5,00</div>
                         </div>
                     </div>
-                    
+
                     <div class="mt-8 text-center">
-                        <a href="https://agendeonline.salonsoft.com.br/barbearia98" target="_blank" class="inline-block bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-yellow-primary transition">
+                        <a href="https://agendeonline.salonsoft.com.br/barbearia98" target="_blank"
+                            class="inline-block bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-yellow-primary transition">
                             Agendar agora
                         </a>
                     </div>
                 </div>
             </div>
-       </section>
-       
-       <section id="localizacao" class="py-16 bg-yellow-primary/90">
+        </section>
+
+        <section id="localizacao" class="py-16 bg-yellow-primary/90">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold mb-16 text-center text-uppercase">
-                    <span class="text-white">NOSSA</span> 
+                    <span class="text-white">NOSSA</span>
                     <span class="text-black">LOCALIZAÇÃO</span>
                 </h2>
-                
+
                 <div class="max-w-6xl mx-auto">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- Informações de contato -->
                         <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col justify-center">
                             <div class="space-y-6">
                                 <div>
                                     <h3 class="text-xl font-bold mb-2 text-yellow-primary">Localização:</h3>
                                     <p class="text-gray-700">Barreiros - PE, Pátio Santa Terezinha</p>
                                 </div>
-                                
+
                                 <div>
                                     <h3 class="text-xl font-bold mb-2 text-yellow-primary">Telefone:</h3>
                                     <p class="text-gray-700">(81) 90000-0000</p>
                                 </div>
-                                
+
                                 <div class="pt-4">
-                                    <a href="https://wa.me/message/FDALFA6DSSO6O1" target="_blank" class="inline-block bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-yellow-primary transition">
+                                    <a href="https://wa.me/message/FDALFA6DSSO6O1" target="_blank"
+                                        class="inline-block bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-yellow-primary transition">
                                         Entre em contato
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Google Maps Embed -->
                         <div class="rounded-lg overflow-hidden shadow-lg h-[400px]">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.41836560760092!2d-35.19925984718604!3d-8.81480485106894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7007d5eaa13f5a5%3A0xf4429af2879b9d30!2sP%C3%A1tio%20Santa%20Terezinha!5e0!3m2!1spt-BR!2sbr!4v1741552785198!5m2!1spt-BR!2sbr" 
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.41836560760092!2d-35.19925984718604!3d-8.81480485106894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7007d5eaa13f5a5%3A0xf4429af2879b9d30!2sP%C3%A1tio%20Santa%20Terezinha!5e0!3m2!1spt-BR!2sbr!4v1741552785198!5m2!1spt-BR!2sbr"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
                     </div>
                 </div>
-                <!-- Adicionando padding-bottom extra para garantir que a seção seja grande o suficiente -->
-                <div class="py-10"></div>
-       </section>
+            </div>
+        </section>
     </main>
-
-    <!-- Rodapé -->
     <footer class="bg-black text-white py-10">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <img src="./images/barbearia-98-logo.png" alt="Barbearia 98" class="h-[80px]">
+                    <img src="./public/images/barbearia-98-logo.webp" alt="Barbearia 98" class="h-[80px]">
                 </div>
-                
+
                 <div class="text-center md:text-right">
                     <p class="mb-2">&copy; 2025 Barbearia 98. Todos os direitos reservados.</p>
                     <p class="text-gray-400">Criado com orgulho em Barreiros - PE</p>
@@ -261,96 +245,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Script para menu mobile e rolagem
-        document.addEventListener('DOMContentLoaded', function() {
-            // Menu mobile toggle
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            menuToggle.addEventListener('click', function() {
-                mobileMenu.classList.toggle('show');
-            });
-            
-            // Selecionar todos os links da navegação (desktop e mobile)
-            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
-            
-            // Adicionar evento de clique para rolagem suave
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        // Fechar o menu mobile se estiver aberto
-                        mobileMenu.classList.remove('show');
-                        
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 76, // Ajustar para a altura do menu fixo
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Função para detectar qual seção está visível
-            function updateActiveNav() {
-                const sections = document.querySelectorAll('section');
-                const scrollPosition = window.scrollY + 150; // Ajuste considerando o menu fixo
-                const windowHeight = window.innerHeight;
-                const documentHeight = document.body.scrollHeight;
-                
-                // Verificar se estamos no final da página
-                const isAtBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 100;
-                
-                if (isAtBottom) {
-                    // Se estiver no final da página, ativar o último item do menu (Localização)
-                    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
-                    navLinks.forEach(link => {
-                        link.classList.remove('active-nav');
-                    });
-                    
-                    const locationLinks = document.querySelectorAll('.nav-link[href="#localizacao"], .mobile-nav-link[href="#localizacao"]');
-                    locationLinks.forEach(link => {
-                        link.classList.add('active-nav');
-                    });
-                    return;
-                }
-                
-                // Código existente para destacar seções durante a rolagem
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    const sectionId = section.getAttribute('id');
-                    
-                    if (
-                        scrollPosition >= sectionTop &&
-                        scrollPosition < sectionTop + sectionHeight
-                    ) {
-                        // Remover classe ativa de todos os links
-                        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
-                        navLinks.forEach(link => {
-                            link.classList.remove('active-nav');
-                        });
-                        
-                        // Adicionar classe ativa aos links correspondentes
-                        const activeLinks = document.querySelectorAll(`.nav-link[href="#${sectionId}"], .mobile-nav-link[href="#${sectionId}"]`);
-                        activeLinks.forEach(link => {
-                            link.classList.add('active-nav');
-                        });
-                    }
-                });
-            }
-            
-            // Adicionar evento de rolagem
-            window.addEventListener('scroll', updateActiveNav);
-            
-            // Executar uma vez no carregamento da página
-            updateActiveNav();
-        });
-    </script>
 </body>
+
 </html>

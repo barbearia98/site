@@ -1,12 +1,18 @@
 {
   "name": "barbearia-98",
   "version": "1.0.0",
+  "description": "Website da Barbearia 98",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "tailwindcss -i ./styles.css -o ./dist/styles.css --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "barbearia98"
+  ],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "packageManager": "yarn@1.22.22",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
 }
