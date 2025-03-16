@@ -3,7 +3,6 @@ import tailwindcss from '@tailwindcss/vite'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
-  base: '/barbearia98/site/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
