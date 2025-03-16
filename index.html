@@ -14,8 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/styles.css">
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js" defer></script>
 </head>
 
 <body class="bg-gray-100 font-sans">
@@ -29,7 +29,7 @@
 
             <ul class="hidden md:flex space-x-8 items-center">
                 <li><a href="#servicos" class="nav-link text-white hover:text-yellow-primary transition">Nossos
-                        Serviços</a></li>
+                       Serviços</a></li>
                 <li><a href="#precos" class="nav-link text-white hover:text-yellow-primary transition">Preços</a></li>
                 <li><a href="#localizacao"
                         class="nav-link text-white hover:text-yellow-primary transition">Localização</a></li>
@@ -42,7 +42,7 @@
             </ul>
 
             <div class="md:hidden">
-                <button id="menu-toggle" class="focus:outline-none text-white">
+                <button id="menu-toggle" class="focus:outline-hidden text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -76,12 +76,8 @@
         </div>
     </nav>
 
-    <header class="relative bg-cover bg-center bg-no-repeat h-[500px] pt-[76px]">
-        <div class="absolute inset-0">
-            <img src="./images/hero-image-barbearia.webp" alt="Background" class="w-full h-full object-cover">
-        </div>
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="container relative z-10 mx-auto px-6 flex h-[400px] items-center">
+    <header class="bg-cover bg-center bg-no-repeat h-[500px] bg-[url(/images/hero-image-barbearia.webp)] bg-gray-600 bg-blend-multiply">
+        <div class="container z-10 relative mx-auto px-6 flex h-full items-center">
             <div class="text-white max-w-xl">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Barbearia 98</h1>
                 <p class="text-xl mb-8">Seu estilo. Nossa Missão.</p>
