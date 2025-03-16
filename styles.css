@@ -1,7 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@theme {
+  --font-*: initial;
+  --font-sans: Roboto, sans-serif;
+
+  --color-yellow-primary: #d4af37;
+  --color-light-gray: rgba(240, 240, 240, 1);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 .text-uppercase {
     text-transform: uppercase;
